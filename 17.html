@@ -1,0 +1,34 @@
+<!-- Calculate the sum of digits of a positive integer number -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Digits</h2>
+    <label for="numInput"> sum of positive integers</label>
+    <input type="number" id="numInput" required>
+    <button onclick="calculate()">Click</button>
+    <div id="res"></div>
+    <script>
+        function calculate() {
+            const i = document.getElementById('numInput').value;
+            const result = document.getElementById('res');
+            if (i <= 0 || !Number.isInteger(parseInt(i))) {
+                result.textContent = 'Please Enter valid positive Integer';
+                return;
+            } 
+            let n = parseInt(i)
+            let s = 0;
+            for (let d; n > 0; n = Math.floor(n / 10)) {
+              d = n % 10
+              s += d
+            }
+            result.textContent = `the sum of digits of ${i} is : ${s}`
+        }
+    </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 // Create a function that will convertfrom Fahrenheit to Celsius
 
 function fare(faren) {
-    return (faren - 32) * 5/9
+    return (faren - 32) * 5 / 9
 }
 let farenT = 90;
 let celS = fare(farenT);
